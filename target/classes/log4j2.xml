@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="WARN">
+	<appenders>
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+		</Console>
+	</appenders>
+	<loggers>
+		<root level="trace">
+			<appender-ref ref="Console" />
+		</root>
+		<logger name="es.aguasnegras.logging.model" level="info" additivity="false">
+			<appender-ref ref="Console" />
+		</logger>
+		<logger name="es.aguasnegras.logging.model.BannerMan" level="trace" additivity="false">
+			<appender-ref ref="Console" />
+		</logger>
+	</loggers>
+</configuration>
